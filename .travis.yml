@@ -8,4 +8,4 @@ install:
   - "mv spark-1.4.0 ~/bin/"
   - "pip install numpy"
 # command to run tests
-script: run.sh
+script: ./run.sh
