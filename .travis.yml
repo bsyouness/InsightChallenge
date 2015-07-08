@@ -3,10 +3,10 @@ python:
   - "2.7"
 # command to install dependencies
 install:
-  - "wget http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0.tgz"
-  - "tar -xzf spark-1.4.0.tgz"
+  - "wget http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0-bin-hadoop2.6.tgz"
+  - "tar -xzf spark-1.4.0-bin-hadoop2.6.tgz"
   - "mkdir ~/bin"
-  - "mv spark-1.4.0 ~/bin/"
+  - "mv spark-1.4.0-bin-hadoop2.6 ~/bin/spark-1.4.0"
   - "ls ~/bin"
   - "find ~/bin -type d"
   - "pip install numpy"
