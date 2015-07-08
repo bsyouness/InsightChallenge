@@ -4,7 +4,7 @@ python:
 # command to install dependencies
 install:
   - "wget http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0.tgz"
-  - "tar -xvzf spark-1.4.0.tgz"
+  - "tar -xzf spark-1.4.0.tgz"
   - "mv spark-1.4.0 ~/bin/"
   - "pip install numpy"
 # command to run tests
