@@ -3,8 +3,7 @@ python:
   - "2.7"
 # command to install dependencies
 install:
-  - "pip install unittest"
   - "pip install pyspark"
-  - "pip install operator"
+  -	"pip install numpy"
 # command to run tests
 script: run.sh
