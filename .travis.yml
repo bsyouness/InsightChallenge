@@ -5,7 +5,10 @@ python:
 install:
   - "wget http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0.tgz"
   - "tar -xzf spark-1.4.0.tgz"
+  - "mkdir ~/bin"
   - "mv spark-1.4.0 ~/bin/"
+  - "ls ~/bin"
+  - "find ~/bin -type d"
   - "pip install numpy"
 # command to run tests
 script: ./run.sh
