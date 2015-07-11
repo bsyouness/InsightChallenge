@@ -1,6 +1,6 @@
-""" Functions for processing tweets
-    This is nearly identical to code in the PySpark example library:
-    https://spark.apache.org/examples.html
+""" Functions for processing tweets.
+This is nearly identical to code in the PySpark example library:
+https://spark.apache.org/examples.html
 """
 
 import sys
@@ -11,8 +11,8 @@ def wordcount(input_path, output_path):
     """ Computes a histogram of word occurences from a set of tweets.
 
     Args: 
-        input_path: the name of the file to read, 
-        output_path: the name of the file to output to.
+      input_path: the name of the file to read, 
+      output_path: the name of the file to output to.
     """
 
     # Initiate a SparkContext instance.
@@ -34,7 +34,8 @@ def wordcount(input_path, output_path):
     output = counts.collect()
 
     # Write the list of words and their count to an output file
-    with open(output_path, "w+") as f:
+    with open(output_path, "w") as f:
+        print "Writing to: " + output_path
         for (word, count) in output:
             f.write("{:<50}{:10}\n".format(word, str(count)))
 
@@ -42,11 +43,12 @@ def wordcount(input_path, output_path):
     sc.stop()
 
 if __name__ == "__main__":
-    input_path = sys.argv[1]
-    output_path = sys.argv[2]
 
-    if (input_path is None) | (output_path is None):
+    if len(sys.argv) != 3:
         print("Usage is: wordcount.py <input_path> <output_path>")
         exit(-1)
+
+    input_path = sys.argv[1]
+    output_path = sys.argv[2]
 
     wordcount(input_path, output_path)
