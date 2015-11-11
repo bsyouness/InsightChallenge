@@ -46,4 +46,4 @@ This map is only useful if the time to compute a unique word count is very high 
 
 This solution does not scale as well as my first.
 
-### Thanks for reviewing my code :)
+#### Thanks for reviewing my code :)
