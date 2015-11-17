@@ -29,7 +29,7 @@ They are described below.
 `wordcount.py` calculates the total number of times each word in the input file appears. 
 This can be solved with a map followed by a reduce; see the script for more details.
 
-`wordcount.py` takes a number of computational steps which is linear in the number of tweets, but can run in *O(log n)* sequential time steps (not computational steps) given enough paralellism. Here, the map would be executed simultaneously (in parallel). The reduce would take *O(log n)* sequential steps.
+`wordcount.py` takes a number of computational steps which is linear in the number of tweets, but can run in *O(log n)* sequential time steps (not computational steps) given enough parallelism. Here, the map would be executed simultaneously (in parallel). The reduce would take *O(log n)* sequential steps.
 
 ### Median
 
